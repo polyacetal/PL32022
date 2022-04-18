@@ -13,9 +13,4 @@ class KozaApp3
         }
         System.exit(0);
     }
-
-    int goal(int )
-    {
-        
-    }
 }
