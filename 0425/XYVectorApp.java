@@ -3,35 +3,29 @@ class XYVectorApp
     public static void main(String[] args)
     {
         double kotae;
-        XYVector a,b;
+        XYVector a,b,c;
         a = new XYVector();
         b = new XYVector();
+        c = new XYVector();
 
         a.x = Double.parseDouble(args[0]);
         a.y = Double.parseDouble(args[1]);
         b.x = Double.parseDouble(args[2]);
         b.y = Double.parseDouble(args[3]);
 
+        System.out.println("aのベクトル :");
         a.print();
         kotae = a.norm();
+        System.out.print("aのベクトルのノルム : ");
         System.out.println(kotae);
-        in(a,b);
-        puls(a,b);
-    }
-
-    static void in(XYVector a, XYVector b)//内積(inner product)
-    {
-        double kotae;
-        kotae = a.x*b.x + a.y*b.y;
+        kotae = XYVectorClac.in(a,b);
+        System.out.print("aベクトルとbベクトルの内積 : ");
         System.out.println(kotae);
-    }
-
-    static void puls(XYVector a, XYVector b)
-    {
-        XYVector c;
-        c = new XYVector();
-        c.x = a.x + b.x;
-        c.y = a.y + b.y;
+        XYVectorClac.puls(a,b,c);
+        System.out.println("aベクトルとbベクトルの和 :");
+        c.print();
+        XYVectorClac.minu(a,b,c);
+        System.out.println("aベクトルとbベクトルの差 :");
         c.print();
     }
 }
