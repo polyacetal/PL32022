@@ -1,0 +1,21 @@
+class XYVectorApp
+{
+    public static void main(String[] args)
+    {
+        XYVector a;
+        a = new XYVector();
+
+        a.x = Double.parseDouble(args[0]);
+        a.y = Double.parseDouble(args[1]);
+
+        a.print();
+
+        XYVector b;
+        b = a;
+        b.x = Double.parseDouble(args[2]);
+        b.y = Double.parseDouble(args[3]);
+
+        b.print();
+        a.print();
+    }
+}

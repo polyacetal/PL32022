@@ -1,0 +1,11 @@
+class XYVector
+{
+    double x;
+    double y;
+
+    void print()
+    {
+        System.out.println("x = "+x);
+        System.out.println("y = "+y);
+    }
+}
