@@ -18,13 +18,13 @@ class XYVectorApp
         kotae = a.norm();
         System.out.println("aのベクトルのノルム : ");
         System.out.println(kotae);
-        kotae = XYVectorClac.in(a,b);
+        kotae = XYVectorCalc.in(a,b);
         System.out.println("aベクトルとbベクトルの内積 : ");
         System.out.println(kotae);
-        XYVectorClac.puls(a,b,c);
+        XYVectorCalc.puls(a,b,c);
         System.out.println("aベクトルとbベクトルの和 :");
         c.print();
-        XYVectorClac.minu(a,b,c);
+        XYVectorCalc.minu(a,b,c);
         System.out.println("aベクトルとbベクトルの差 :");
         c.print();
     }

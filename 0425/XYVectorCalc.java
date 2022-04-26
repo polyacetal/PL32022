@@ -1,4 +1,4 @@
-class XYVectorClac
+class XYVectorCalc
 {
    static double in(XYVector a, XYVector b)
    {
