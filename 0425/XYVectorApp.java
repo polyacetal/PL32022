@@ -16,10 +16,10 @@ class XYVectorApp
         System.out.println("aのベクトル :");
         a.print();
         kotae = a.norm();
-        System.out.print("aのベクトルのノルム : ");
+        System.out.println("aのベクトルのノルム : ");
         System.out.println(kotae);
         kotae = XYVectorClac.in(a,b);
-        System.out.print("aベクトルとbベクトルの内積 : ");
+        System.out.println("aベクトルとbベクトルの内積 : ");
         System.out.println(kotae);
         XYVectorClac.puls(a,b,c);
         System.out.println("aベクトルとbベクトルの和 :");
