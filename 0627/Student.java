@@ -57,4 +57,14 @@ class Student
         a.gakunen += 1;
         System.out.println("彼「" + a.namae + "」は" + a.gakunen + "年に進級しました！");
     }
+
+    void ryunen()
+    {
+        System.out.println("私「" + this.namae + "」は留年しました.");
+    }
+
+    void ryunen(Student a)
+    {
+        System.out.println("私「" + a.namae + "」は留年しました.");
+    }
 }
