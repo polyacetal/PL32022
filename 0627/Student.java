@@ -63,8 +63,20 @@ class Student
         System.out.println("私「" + this.namae + "」は留年しました.");
     }
 
-    void ryunen(Student a)
+    static void ryunen(Student a)
     {
-        System.out.println("私「" + a.namae + "」は留年しました.");
+        System.out.println("彼「" + a.namae + "」は留年しました.");
+    }
+
+    void tenka(String bunnya)
+    {
+        this.bunnya = bunnya;
+        System.out.println("私「" + this.namae + "」は" + this.bunnya + "に転科しました.");
+    }
+
+    static void tenka(Student a, String bunnya)
+    {
+        a.bunnya = bunnya;
+        System.out.println("彼「" + a.namae + "」は" + a.bunnya + "に転科しました.");
     }
 }

@@ -20,5 +20,13 @@ class StudentApp
         Student.shinkyu(suneo);
         Student.shokai(jaian);
         suneo.shokai();
+        Student.ryunen(nobita);
+        doraemon.ryunen();
+        nobita.shokai();
+        Student.shokai(doraemon);
+        Student.tenka(jaian, "機械");
+        suneo.tenka("電気");
+        jaian.shokai();
+        suneo.shokai();
     }
 }
