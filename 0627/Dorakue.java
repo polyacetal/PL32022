@@ -2,6 +2,7 @@ import java.util.Random;
 class Dorakue
 {
     String name;    //名前
+    String job;     //職業
     int goald;      //所持金
     int lv;         //レベル
     int exp;        //経験値
@@ -17,9 +18,10 @@ class Dorakue
     int dex;        //きようさ
     int bet;        //みりょく
 
-    Dorakue(String name)
+    Dorakue(String name, String job)
     {
         this.name = name;
+        this.job = job;
         this.goald = 0;
         this.lv = 1;
         this.exp = 0;
@@ -80,6 +82,7 @@ class Dorakue
     void status()
     {
         System.out.println("name: " + this.name);
+        System.out.println("job : " + this.job);
         System.out.println("lv  : " + this.lv);
         System.out.println("hp  : " + this.hp);
         System.out.println("mp  : " + this.mp);
@@ -107,5 +110,11 @@ class Dorakue
         Random rand = new Random();
         this.goald += rand.nextInt(4) + 10;
         System.out.println("戦闘に勝利した。" + this.name + "は" + this.goald + "G手に入れた。");
+    }
+
+    void jobChange(String job)
+    {
+        this.job = job;
+        System.out.println(this.name + "は" + this.job + "になった。");
     }
 }
