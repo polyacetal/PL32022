@@ -17,8 +17,9 @@ class Dorakue
     int dex;        //きようさ
     int bet;        //みりょく
 
-    Dorakue()
+    Dorakue(String name)
     {
+        this.name = name;
         this.goald = 0;
         this.lv = 1;
         this.exp = 0;
@@ -42,13 +43,13 @@ class Dorakue
         int mp = rand.nextInt(11) + 10;
         int atk = rand.nextInt(3) + 4;
         int def = rand.nextInt(3) + 4;
-        int mat;
-        int mdf;
-        int str;
-        int vit;
-        int agi;
-        int dex;
-        int bet;
+        int mat = rand.nextInt(3) + 4;
+        int mdf = rand.nextInt(3) + 4;
+        int str = rand.nextInt(3) + 4;
+        int vit = rand.nextInt(3) + 4;
+        int agi = rand.nextInt(3) + 4;
+        int dex = rand.nextInt(3) + 4;
+        int bet = rand.nextInt(3) + 1;
         this.lv += 1;
         this.hp += hp;
         this.mp += mp;
@@ -65,13 +66,22 @@ class Dorakue
         System.out.println("lv:  +1 -> " + this.lv);
         System.out.println("hp:  +" + hp + " -> " + this.hp);
         System.out.println("mp:  +" + mp + " -> " + this.mp);
+        System.out.println("atk: +" + atk + " -> " + this.atk);
+        System.out.println("def: +" + def + " -> " + this.def);
+        System.out.println("mat: +" + mat + " -> " + this.mat);
+        System.out.println("mdf: +" + mdf + " -> " + this.mdf);
+        System.out.println("str: +" + str + " -> " + this.str);
+        System.out.println("vit: +" + vit + " -> " + this.vit);
+        System.out.println("agi: +" + agi + " -> " + this.agi);
+        System.out.println("dex: +" + dex + " -> " + this.dex);
+        System.out.println("bet: +" + bet + " -> " + this.bet);
     }
 
     void death()
     {
         this.goald = this.goald / 2;
-        System.out.println(tish.name + "は死んでしまった。")
-        System.out.println("所持金が半分になった。")
+        System.out.println(this.name + "は死んでしまった。");
+        System.out.println("所持金が半分になった。");
     }
 
 }
