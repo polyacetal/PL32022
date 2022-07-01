@@ -76,12 +76,36 @@ class Dorakue
         System.out.println("dex: +" + dex + " -> " + this.dex);
         System.out.println("bet: +" + bet + " -> " + this.bet);
     }
+    
+    void status()
+    {
+        System.out.println("name: " + this.name);
+        System.out.println("lv  : " + this.lv);
+        System.out.println("hp  : " + this.hp);
+        System.out.println("mp  : " + this.mp);
+        System.out.println("atk : " + this.atk);
+        System.out.println("def : " + this.def);
+        System.out.println("mat : " + this.mat);
+        System.out.println("mdf : " + this.mdf);
+        System.out.println("str : " + this.str);
+        System.out.println("vit : " + this.vit);
+        System.out.println("agi : " + this.agi);
+        System.out.println("dex : " + this.dex);
+        System.out.println("bet : " + this.bet);
+    }
 
     void death()
     {
         this.goald = this.goald / 2;
         System.out.println(this.name + "は死んでしまった。");
         System.out.println("所持金が半分になった。");
+        System.out.println(this.goald + "G");
     }
 
+    void win()
+    {
+        Random rand = new Random();
+        this.goald += rand.nextInt(4) + 10;
+        System.out.println("戦闘に勝利した。" + this.name + "は" + this.goald + "G手に入れた。");
+    }
 }

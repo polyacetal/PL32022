@@ -7,6 +7,11 @@ class DorakueApp
         Dorakue kenja = new Dorakue("ライド");
         Dorakue mahoutukai = new Dorakue("マリス");
 
+        yuusya.status();
         yuusya.lvUp();
+        yuusya.status();
+        sensi.status();
+        yuusya.win();
+        yuusya.death();
     }
 }
