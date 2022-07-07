@@ -4,6 +4,7 @@ class Student
     private String bunnya;  //分野 "情報", "機械", "電気", "電子", "建築"のいずれかの文字列
     private String namae;   //名前 文字列
     private String jukyo;   //住居 "自宅", "学寮", "下宿"
+    private Item item;
 
     Student()
     {
@@ -65,20 +66,19 @@ class Student
         // gakunen, bunnya, namaeはthis(主たるインスタンス)のフィールドを使う
         System.out.print("私は「" + this.gakunen + "年" + this.bunnya + "」の「" + this.namae + "」です.");
         System.out.println("私の住居は「" + this.jukyo + "」です.");
-        if(this.item != null) System.out.println("私は" + this.item.getName() + "を持っています.");
+        if(this.item != null) System.out.println("私は" + this.item.getNamae() + "を持っています.");
     }
 
-    void setItem(Item a, String namae, int kakaku, String rarity)
+    void setItem(Item a)
     {
-        a.setNamae(namae);
-        a.setKakaku(kakaku);
-        a.setRarity(rarity);
+        this.item = new Item();
+        this.item.setNamae(a.getNamae());
+        this.item.setKakaku(a.getKakaku());
+        this.item.setRarity(a.getRarity());
     }
 
-    Item getItem(Item a)
+    Item getItem()
     {
-        a.getNamae();
-        a.getKakaku();
-        a.getRarity();
+        return this.item;
     }
 }
