@@ -12,6 +12,7 @@ class Student
         this.bunnya = "未定";
         this.namae = "未定";
         this.jukyo = "未定";
+        this.item = null;
     }
 
     void setGakunen(int gakunen)
