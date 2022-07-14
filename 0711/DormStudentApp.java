@@ -7,5 +7,6 @@ public class DormStudentApp
 
         a.setDousitu(b);
         a.shokai();
+        b.shokai();
     }
 }

@@ -16,6 +16,10 @@ public class DormStudent extends Student
     public void setDousitu(DormStudent dousitu)
     {
         this.dousitu = dousitu;
+        if(dousitu.getDousitu() == null)
+        {
+            dousitu.setDousitu(this);
+        }
     }
     
     public void shokai()
