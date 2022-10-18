@@ -2,13 +2,13 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Training1 extends JFrame implements ActionListener
+public class Training2 extends JFrame implements ActionListener
 {
     private JButton button1;
     private JButton button2;
     private JLabel label1;
 
-    public Training1()
+    public Training2()
     {
         super();
         JPanel panel1 = new JPanel();
@@ -35,7 +35,7 @@ public class Training1 extends JFrame implements ActionListener
 
     public static void main(String[] args)
     {
-        Training1 a = new Training1();
+        Training2 a = new Training2();
         a.setSize(640, 480);
         a.setLocation(100, 100);
         a.setVisible(true);
