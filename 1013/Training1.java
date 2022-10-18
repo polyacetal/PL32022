@@ -13,6 +13,7 @@ public class Training1 extends JFrame implements ActionListener
         super();
         JPanel panel1 = new JPanel();
         FlowLayout flow1 = new FlowLayout();
+        panel1.setLayout(flow1);
         this.label1 = new JLabel("Hello");
         this.button1 = new JButton("押してね");
         this.button1.addActionListener(this);
@@ -21,7 +22,6 @@ public class Training1 extends JFrame implements ActionListener
         panel1.add(this.button1);
         panel1.add(this.button2);
         super.getContentPane().add(panel1);
-        panel1.setLayout(flow1);
     }
 
     public void actionPerformed(ActionEvent e)
