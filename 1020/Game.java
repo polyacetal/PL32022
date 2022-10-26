@@ -7,7 +7,7 @@ public class Game extends JFrame implements ActionListener
     private JRadioButton rb1, rb2, rb3, rb4, rb5, rb6;
     private JLabel label1;
     private Jpanel panel1, panel2, panel3, panel4;
-    private JButton kettei1;
+    private JButton kettei1, kettei2;
 
     public Game()
     {
@@ -18,10 +18,10 @@ public class Game extends JFrame implements ActionListener
         this.rb2 = new JRadioButton("雑貨屋");
         this.rb3 = new JRadioButton("宿屋", true);
     
-        ButtonGroup group = new ButtonGroup();
-        group.add(this.rb1);
-        group.add(this.rb2);
-        group.add(this.rb3);
+        ButtonGroup group1 = new ButtonGroup();
+        group1.add(this.rb1);
+        group1.add(this.rb2);
+        group1.add(this.rb3);
 
         this.kettei1 = new JButton("決定");
         this.kettei1.addActionListener(this);
@@ -39,6 +39,14 @@ public class Game extends JFrame implements ActionListener
         this.rb4 = new JRadioButton("片手剣", true);
         this.rb5 = new JRadioButton("両手剣");
         this.rb6 = new JRadioButton("モーニングスター");
+
+        ButtonGroup group2 = new ButtonGroup();
+        group2.add(this.rb4);
+        group2.add(this.rb5);
+        group2.add(this.rb6);
+
+        this.kettei2 = new JButton("決定");
+        this.kettei2.addActionListener(this);
         
         Jpanel panel = new Jpanel();
         BoxLayout box = new BoxLayout(panel,BoxLayout.Y_AXIS);
