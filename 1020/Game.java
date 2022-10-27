@@ -166,11 +166,38 @@ public class Game extends JFrame implements ActionListener
         }
         else if(e.getSource() == this.kettei3)
         {
-
+            if(this.rb7.isSelected())
+            {
+                System.out.println("薬草を購入");
+                panel1.setEnabled(true);
+                panel1.setVisible(true);
+                panel3.setEnabled(false);
+                panel3.setVisible(false);
+            }
+            else if(this.rb8.isSelected())
+            {
+                System.out.println("魔法の小瓶を購入");
+                panel1.setEnabled(true);
+                panel1.setVisible(true);
+                panel3.setEnabled(false);
+                panel3.setVisible(false);
+            }
+            else if(this.rb9.isSelected())
+            {
+                System.out.println("キメラの翼を購入");
+                panel1.setEnabled(true);
+                panel1.setVisible(true);
+                panel3.setEnabled(false);
+                panel3.setVisible(false);
+            }
         }
         else if(e.getSource() == this.sleep)
         {
-
+            System.out.println("ぐっすりと寝て夜が明けた");
+            panel1.setEnabled(true);
+            panel1.setVisible(true);
+            panel4.setEnabled(false);
+            panel4.setVisible(false);
         }
     }
 
