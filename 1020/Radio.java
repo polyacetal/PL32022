@@ -39,7 +39,6 @@ public class Radio extends JFrame implements ActionListener
             if(this.rb1.isSelected())
             {
                 System.out.println("実習系科目には特にしっかり取り組みましょう！");
-                rb1.setEnabled(false);
             }
         }
     }

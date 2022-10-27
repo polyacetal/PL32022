@@ -4,14 +4,16 @@ import javax.swing.*;
 
 public class Game extends JFrame implements ActionListener
 {
-    private JRadioButton rb1, rb2, rb3, rb4, rb5, rb6;
-    private JLabel label1;
-    private Jpanel panel1, panel2, panel3, panel4;
-    private JButton kettei1, kettei2;
+    private JRadioButton rb1, rb2, rb3, rb4, rb5, rb6, rb7, rb8, rb9;
+    private JLabel label1, label2, label3, label4;
+    private JPanel panel1, panel2, panel3, panel4;
+    private JButton kettei1, kettei2, kettei3, sleep;
 
     public Game()
     {
         super();
+
+        //------------1つ目の画面---------------
         this.panel1 = new JPanel();
         this.label1 = new JLabel("行き先を選んでください");
         this.rb1 = new JRadioButton("武器屋");
@@ -31,9 +33,10 @@ public class Game extends JFrame implements ActionListener
         this.panel1.add(this.rb1);
         this.panel1.add(this.rb2);
         this.panel1.add(this.rb3);
-        this.panel1.add(this.kettei);
+        this.panel1.add(this.kettei1);
+        //------------------------------------
 
-
+        //------------2つ目の画面---------------
         this.panel2 = new JPanel();
         this.label2 = new JLabel("武器屋 : 購入する武器を選んでください");
         this.rb4 = new JRadioButton("片手剣", true);
@@ -47,8 +50,54 @@ public class Game extends JFrame implements ActionListener
 
         this.kettei2 = new JButton("決定");
         this.kettei2.addActionListener(this);
+        BoxLayout box2 = new BoxLayout(panel2,BoxLayout.Y_AXIS);
+        this.panel2.setLayout(box2);
+        this.panel2.add(this.rb4);
+        this.panel2.add(this.rb5);
+        this.panel2.add(this.rb6);
+        this.panel2.add(this.kettei2);
+        panel2.setEnabled(false);
+        panel2.setVisible(false);
+        //------------------------------------
         
-        Jpanel panel = new Jpanel();
+        //------------3つ目の画面---------------
+        this.panel3 = new JPanel();
+        this.label3 = new JLabel("雑貨屋 : 購入するアイテムを選んでください");
+        this.rb7 = new JRadioButton("薬草", true);
+        this.rb8 = new JRadioButton("魔法の小瓶");
+        this.rb9 = new JRadioButton("キメラの翼");
+
+        ButtonGroup group3 = new ButtonGroup();
+        group3.add(this.rb7);
+        group3.add(this.rb8);
+        group3.add(this.rb9);
+
+        this.kettei3 = new JButton("決定");
+        this.kettei3.addActionListener(this);
+        BoxLayout box3 = new BoxLayout(panel3,BoxLayout.Y_AXIS);
+        this.panel3.setLayout(box3);
+        this.panel3.add(this.rb7);
+        this.panel3.add(this.rb8);
+        this.panel3.add(this.rb9);
+        this.panel3.add(this.kettei3);
+        panel3.setEnabled(false);
+        panel3.setVisible(false);
+        //------------------------------------
+
+        //------------4つ目の画面---------------
+        this.panel4 = new JPanel();
+        this.label3 = new JLabel("宿屋 : 宿に泊まり1日が終了します");
+
+        this.sleep = new JButton("宿に泊まる");
+        this.sleep.addActionListener(this);
+        BoxLayout box4 = new BoxLayout(panel4,BoxLayout.Y_AXIS);
+        this.panel4.setLayout(box4);
+        this.panel4.add(this.sleep);
+        panel4.setEnabled(false);
+        panel4.setVisible(false);
+        //------------------------------------
+
+        JPanel panel = new JPanel();
         BoxLayout box = new BoxLayout(panel,BoxLayout.Y_AXIS);
         panel.setLayout(box);
         panel.add(this.panel1);
@@ -61,12 +110,67 @@ public class Game extends JFrame implements ActionListener
 
     public void actionPerformed(ActionEvent e)
     {
-        if(e.getSource() == this.kettei)
+        if(e.getSource() == this.kettei1)
         {
             if(this.rb1.isSelected())
             {
-                System.out.println("実習系科目には特にしっかり取り組みましょう！");
+                System.out.println("武器屋に移動");
+                panel1.setEnabled(false);
+                panel1.setVisible(false);
+                panel2.setEnabled(true);
+                panel2.setVisible(true);
             }
+            else if(this.rb2.isSelected())
+            {
+                System.out.println("雑貨屋に移動");
+                panel1.setEnabled(false);
+                panel1.setVisible(false);
+                panel3.setEnabled(true);
+                panel3.setVisible(true);
+            }
+            else if(this.rb3.isSelected())
+            {
+                System.out.println("宿屋に移動");
+                panel1.setEnabled(false);
+                panel1.setVisible(false);
+                panel4.setEnabled(true);
+                panel4.setVisible(true);
+            }
+        }
+        else if(e.getSource() == this.kettei2)
+        {
+            if(this.rb4.isSelected())
+            {
+                System.out.println("片手剣を購入");
+                panel1.setEnabled(true);
+                panel1.setVisible(true);
+                panel2.setEnabled(false);
+                panel2.setVisible(false);
+            }
+            else if(this.rb5.isSelected())
+            {
+                System.out.println("両手剣を購入");
+                panel1.setEnabled(true);
+                panel1.setVisible(true);
+                panel2.setEnabled(false);
+                panel2.setVisible(false);
+            }
+            else if(this.rb6.isSelected())
+            {
+                System.out.println("モーニングスターを購入");
+                panel1.setEnabled(true);
+                panel1.setVisible(true);
+                panel2.setEnabled(false);
+                panel2.setVisible(false);
+            }
+        }
+        else if(e.getSource() == this.kettei3)
+        {
+
+        }
+        else if(e.getSource() == this.sleep)
+        {
+
         }
     }
 
