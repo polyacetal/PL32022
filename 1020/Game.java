@@ -4,7 +4,8 @@ import javax.swing.*;
 
 public class Game extends JFrame implements ActionListener
 {
-    private JRadioButton rb1, rb2, rb3, rb4, rb5, rb6, rb7, rb8, rb9;
+    private JRadioButton rb1, rb2, rb3, rb4, rb5, rb6;
+    private JCheckBox cb1, cb2, cb3;
     private JLabel label1, label2, label3, label4;
     private JPanel panel1, panel2, panel3, panel4;
     private JButton kettei1, kettei2, kettei3, sleep;
@@ -63,22 +64,17 @@ public class Game extends JFrame implements ActionListener
         //------------3つ目の画面---------------
         this.panel3 = new JPanel();
         this.label3 = new JLabel("雑貨屋 : 購入するアイテムを選んでください");
-        this.rb7 = new JRadioButton("薬草", true);
-        this.rb8 = new JRadioButton("魔法の小瓶");
-        this.rb9 = new JRadioButton("キメラの翼");
-
-        ButtonGroup group3 = new ButtonGroup();
-        group3.add(this.rb7);
-        group3.add(this.rb8);
-        group3.add(this.rb9);
+        this.cb1 = new JCheckBox("薬草", true);
+        this.cb2 = new JCheckBox("魔法の小瓶");
+        this.cb3 = new JCheckBox("キメラの翼");
 
         this.kettei3 = new JButton("決定");
         this.kettei3.addActionListener(this);
         BoxLayout box3 = new BoxLayout(panel3,BoxLayout.Y_AXIS);
         this.panel3.setLayout(box3);
-        this.panel3.add(this.rb7);
-        this.panel3.add(this.rb8);
-        this.panel3.add(this.rb9);
+        this.panel3.add(this.cb1);
+        this.panel3.add(this.cb2);
+        this.panel3.add(this.cb3);
         this.panel3.add(this.kettei3);
         panel3.setEnabled(false);
         panel3.setVisible(false);
@@ -166,7 +162,7 @@ public class Game extends JFrame implements ActionListener
         }
         else if(e.getSource() == this.kettei3)
         {
-            if(this.rb7.isSelected())
+            if(this.cb1.isSelected())
             {
                 System.out.println("薬草を購入");
                 panel1.setEnabled(true);
@@ -174,7 +170,7 @@ public class Game extends JFrame implements ActionListener
                 panel3.setEnabled(false);
                 panel3.setVisible(false);
             }
-            else if(this.rb8.isSelected())
+            if(this.cb2.isSelected())
             {
                 System.out.println("魔法の小瓶を購入");
                 panel1.setEnabled(true);
@@ -182,7 +178,7 @@ public class Game extends JFrame implements ActionListener
                 panel3.setEnabled(false);
                 panel3.setVisible(false);
             }
-            else if(this.rb9.isSelected())
+            if(this.cb3.isSelected())
             {
                 System.out.println("キメラの翼を購入");
                 panel1.setEnabled(true);
