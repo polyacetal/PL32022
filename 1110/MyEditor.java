@@ -18,6 +18,7 @@ public class MyEditor extends JFrame implements ActionListener
         this.save = new JButton("保存");
         this.save.addActionListener(this);
         this.ta1 =new JTextArea(26,52);
+        JScrollPane scrollpane = new JScrollPane(ta1);
         this.states = new JTextField(26);
         this.states.setEditable(false);
 
@@ -32,8 +33,8 @@ public class MyEditor extends JFrame implements ActionListener
         panel1.add(this.save);
 
         panel2.add(panel1);
-        panel2.add(ta1);
-        panel2.add(states);
+        panel2.add(scrollpane);
+        panel2.add(this.states);
         super.getContentPane().add(panel2);
     }
 

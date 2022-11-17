@@ -30,7 +30,7 @@ public class MyEditorRW extends JFrame implements ActionListener
         panel1.add(this.save);
 
         panel2.add(panel1);
-        panel2.add(ta1);
+        panel2.add(this.ta1);
         super.getContentPane().add(panel2);
     }
 
