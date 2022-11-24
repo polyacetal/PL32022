@@ -5,7 +5,7 @@ public class MyPanel extends JPanel
 {
     public MyPanel()
     {
-        super.setBackground(Color.black);
+        super.setBackground(Color.white);
         super.setPreferredSize(new Dimension(640,480));
     }
 
@@ -13,9 +13,8 @@ public class MyPanel extends JPanel
     {
         super.paintComponent(g);
 
-        g.setColor(Color.blue);
-        g.drawLine(50, 50, 100, 100);
-        g.drawOval(32, 16, 256, 128);
-        g.drawString("hello", 48, 48);
+        g.setColor(new Color(90, 255, 35));
+        g.setColor(new Color(255, 255, 100));
+        g.fillOval(220, 50, 200, 250);
     }
 }
