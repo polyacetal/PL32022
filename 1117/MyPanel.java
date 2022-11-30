@@ -13,7 +13,6 @@ public class MyPanel extends JPanel
     {
         super.paintComponent(g);
 
-        g.setColor(new Color(90, 255, 35));
         g.setColor(new Color(255, 255, 100));
         g.fillOval(220, 50, 200, 250);
     }
