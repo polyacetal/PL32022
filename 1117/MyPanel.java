@@ -15,5 +15,7 @@ public class MyPanel extends JPanel
 
         g.setColor(new Color(255, 255, 100));
         g.fillOval(220, 50, 200, 250);
+        g.setColor(new Color(0, 0, 0));
+        g.drawString("egg",315,170);
     }
 }
