@@ -4,6 +4,7 @@ import javax.swing.*;
 public class MyFrame extends JFrame
 {
     private MyPanel mp;
+    private 
 
     public MyFrame()
     {
