@@ -6,6 +6,7 @@ public class DrawPanel extends JPanel
 
     private int verticalSize;
     private int besideSize;
+    private int color;
 
     public DrawPanel()
     {
@@ -21,7 +22,7 @@ public class DrawPanel extends JPanel
 
         g.setColor(new Color(255, 255, 100));
         g.fillOval(this.besideSize, this.verticalSize, 200, 250);
-        g.setColor(new Color(0, 0, 0));
+        g.setColor(new Color(color, color, color));
         g.drawString("egg",this.besideSize + 95, this.verticalSize + 120);
     }
 
@@ -33,5 +34,10 @@ public class DrawPanel extends JPanel
     public void setBesideSize(int x)
     {
         this.besideSize = 170 + x;
+    }
+
+    public void setTextColor(int color)
+    {
+        this.color = color;
     }
 }

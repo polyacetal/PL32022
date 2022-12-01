@@ -6,8 +6,8 @@ import javax.swing.event.*;
 public class SliderDraw extends JFrame implements ChangeListener
 {
     private DrawPanel dp;
-    private JSlider slider1,slider2;
-    private JTextField tf1,tf2,tf3,tf4;
+    private JSlider slider1,slider2,slider3;
+    private JTextField tf1,tf2,tf3,tf4,tf5,tf6;
 
     public SliderDraw()
     {
@@ -28,6 +28,14 @@ public class SliderDraw extends JFrame implements ChangeListener
         this.tf4 = new JTextField(3);
         this.tf4.setEditable(false);
 
+        this.slider3 = new JSlider(0,255,0);
+        this.slider3.addChangeListener(this);
+        this.tf5 = new JTextField(7);
+        this.tf5.setEditable(false);
+        this.tf5.setText("文字の白さ");
+        this.tf6 = new JTextField(3);
+        this.tf6.setEditable(false);
+
         JPanel panel1 = new JPanel();
         panel1.add(this.tf1);
         panel1.add(this.slider1);
@@ -38,12 +46,18 @@ public class SliderDraw extends JFrame implements ChangeListener
         panel2.add(this.slider2);
         panel2.add(this.tf4);
 
+        JPanel panel3 = new JPanel();
+        panel3.add(this.tf5);
+        panel3.add(this.slider3);
+        panel3.add(this.tf6);
+
         JPanel panel = new JPanel();
         BoxLayout box1 = new BoxLayout(panel,BoxLayout.Y_AXIS);
         panel.setLayout(box1);
         panel.add(this.dp);
         panel.add(panel1);
         panel.add(panel2);
+        panel.add(panel3);
 
         super.getContentPane().add(panel);
     }
@@ -62,6 +76,13 @@ public class SliderDraw extends JFrame implements ChangeListener
             int value = this.slider2.getValue();
             this.tf4.setText("" + value);
             this.dp.setBesideSize(value);
+            this.dp.repaint();
+        }
+        if(e.getSource() == this.slider3)
+        {
+            int value = this.slider3.getValue();
+            this.tf6.setText("" + value);
+            this.dp.setTextColor(value);
             this.dp.repaint();
         }
     }
