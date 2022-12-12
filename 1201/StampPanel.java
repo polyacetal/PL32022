@@ -2,9 +2,9 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class MyPanel extends JPanel implements MouseListener
+public class StampPanel extends JPanel implements MouseListener
 {
-    public MyPanel()
+    public StampPanel()
     {
         super.setBackground(Color.white);
         super.setPreferredSize(new Dimension(640,480));
@@ -18,7 +18,7 @@ public class MyPanel extends JPanel implements MouseListener
         g.setColor(new Color(255, 255, 100));
         g.fillOval(220, 50, 200, 250);
         g.setColor(new Color(0, 0, 0));
-        g.drawString("egg",315,170);
+        g.drawString("stamp",305,175);
     }
 
     public void mousePressed(MouseEvent e)  // マウスボタンが押されたとき

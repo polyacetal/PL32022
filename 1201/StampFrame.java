@@ -1,13 +1,13 @@
 import java.awt.*;
 import javax.swing.*;
 
-public class MyFrame extends JFrame
+public class StampFrame extends JFrame
 {
-    private MyPanel mp;
+    private StampPanel mp;
 
-    public MyFrame()
+    public StampFrame()
     {
-        this.mp = new MyPanel();
+        this.mp = new StampPanel();
         JPanel panel = new JPanel();
         panel.add(this.mp);
         super.getContentPane().add(panel);
@@ -15,7 +15,7 @@ public class MyFrame extends JFrame
 
     public static void main(String[] args)
     {
-        MyFrame a = new MyFrame();
+        StampFrame a = new StampFrame();
         a.setSize(640, 480);
         a.setLocation(100,100);
         a.setVisible(true);
