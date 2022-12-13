@@ -102,10 +102,4 @@ public class DrawPanel extends JPanel implements MouseListener, MouseMotionListe
     {
         this.repaint();
     }
-    /*
-    参考にしたページ
-    https://www.geekjob.jp/beginning/learnning/java-primer/3/
-    https://docs.oracle.com/javase/jp/8/docs/api/javax/swing/JSlider.html
-    https://www.tech-teacher.jp/blog/java-boolean/
-    */
 }

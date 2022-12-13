@@ -112,11 +112,4 @@ public class DoubleDrawPanel extends JPanel implements MouseListener, MouseMotio
         g.dispose();
         this.repaint();
     }
-    /*
-    参考にしたページ
-    https://docs.oracle.com/javase/jp/8/docs/api/java/awt/image/BufferedImage.html
-    https://docs.oracle.com/javase/jp/8/docs/api/java/awt/Graphics.html
-    https://docs.oracle.com/javase/jp/8/docs/api/java/awt/Image.html
-    https://docs.oracle.com/javase/jp/8/docs/api/java/awt/image/ImageObserver.html
-    */
 }
