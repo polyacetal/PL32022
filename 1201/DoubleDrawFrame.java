@@ -23,8 +23,6 @@ public class DoubleDrawFrame extends JFrame implements ActionListener, ChangeLis
         group.add(this.rb2);
         this.rb1.addActionListener(this);
         this.rb2.addActionListener(this);
-        this.bt1 = new JButton("決定");
-        this.bt1.addActionListener(this);
         this.bt1 = new JButton("初期化");
         this.bt1.addActionListener(this);
 
