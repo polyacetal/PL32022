@@ -12,7 +12,7 @@ public class MovePanel extends JPanel
         super.setBackground(Color.white);
         super.setPreferredSize(new Dimension(640,480));
         this.chara_i = 0;
-        this.chara_x = 250;
+        this.chara_x = 0;
         this.chara_y = 0;
         this.delay = 0;
     }
@@ -28,11 +28,8 @@ public class MovePanel extends JPanel
         this.chara_i++;
         this.chara_i = this.chara_i % this.chara_array.length;
         }
-        this.chara_x -=2;
-        if(this.chara_x < 0)
-        {
-            this.chara_x = 250;
-        }
+        this.chara_x +=2;
+        this.chara_x = this.chara_x % 220;
         g.drawImage(this.chara_array[this.chara_i], this.chara_x, this.chara_y,this);
     }
 }
